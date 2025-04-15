@@ -1,17 +1,150 @@
 .mi-componente {
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffe6e6, #e6f7ff, #f9fbe7, #ffd6ff, #e0c3fc);
+    border-radius: 25px;
+    padding: 35px 40px;
+    margin: 40px auto;
+    max-width: 700px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 105, 180, 0.15);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border: 3px solid #ffb3b3;
+    background-size: 500% 500%;
+    animation: gradientFlow 12s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.mi-componente::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0.4;
+    animation: shimmer 6s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
+}
+
+.mi-componente:hover {
+    transform: scale(1.04) translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25), 0 0 30px rgba(255, 105, 180, 0.3);
+    border-color: #66ccff;
+    border-width: 4px;
+    border-style: double;
 }
 
 .mi-componente h2 {
-    color: #333;
-    margin-bottom: 10px;
+    color: #ff3e6c;
+    margin-bottom: 22px;
+    font-size: 34px;
+    font-weight: 800;
+    text-shadow: 2px 2px 0 #fff2cc, -1px -1px 0 rgba(0,0,0,0.1);
+    border-bottom: 3px dashed #ffcccb;
+    padding-bottom: 12px;
+    letter-spacing: 1.2px;
+    position: relative;
+    display: inline-block;
+}
+
+.mi-componente h2::after {
+    content: "✨";
+    position: absolute;
+    right: -30px;
+    top: 0;
+    font-size: 24px;
+    animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.3) rotate(20deg); }
 }
 
 .mi-componente p {
-    color: #666;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.9;
+    margin-top: 18px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    padding: 15px;
+    border-left: 5px solid;
+    border-image: linear-gradient(to bottom, #87ceeb, #9370db, #ff69b4) 1;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mi-componente p:hover {
+    transform: translateX(5px);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(240, 255, 255, 0.9));
+}
+
+/* Entrada animada mejorada */
+.mi-componente {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efectos adicionales */
+.mi-componente::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #ff6b6b, #6b95ff, #5cdb95, #ffcc29);
+    border-radius: 0 0 25px 25px;
+}
+
+/* Estilos para botones dentro del componente */
+.mi-componente .boton {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
     font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.mi-componente .boton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 65, 108, 0.6);
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+}
+
+/* Efectos de neón en hover */
+.mi-componente:hover h2 {
+    color: #ff1493;
+    text-shadow: 0 0 5px rgba(255, 20, 147, 0.5), 0 0 10px rgba(255, 20, 147, 0.3);
 }
