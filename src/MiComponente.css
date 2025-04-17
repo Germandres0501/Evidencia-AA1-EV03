@@ -1,16 +1,17 @@
 .mi-componente {
-    background: linear-gradient(135deg, #ffe6e6, #e6f7ff, #f9fbe7, #ffd6ff, #e0c3fc);
-    border-radius: 25px;
+    background: linear-gradient(135deg, #0f0c29, #1c0522, #302b63, #24243e, #121212);
+    border-radius: 15px;
     padding: 35px 40px;
     margin: 40px auto;
-    max-width: 700px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 20px rgba(255, 105, 180, 0.15);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-    border: 3px solid #ffb3b3;
-    background-size: 500% 500%;
-    animation: gradientFlow 12s ease infinite;
+    max-width: 750px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 30px rgba(72, 0, 72, 0.4);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+    border: 2px solid rgba(102, 16, 242, 0.5);
+    background-size: 300% 300%;
+    animation: gradientFlow 18s ease infinite;
     position: relative;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 .mi-componente::before {
@@ -20,9 +21,9 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
-    opacity: 0.4;
-    animation: shimmer 6s infinite linear;
+    background: radial-gradient(circle, rgba(94, 23, 235, 0.12) 0%, rgba(10, 10, 30, 0) 70%);
+    opacity: 0.7;
+    animation: shimmer 15s infinite linear;
     pointer-events: none;
 }
 
@@ -40,64 +41,73 @@
 }
 
 .mi-componente:hover {
-    transform: scale(1.04) translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25), 0 0 30px rgba(255, 105, 180, 0.3);
-    border-color: #66ccff;
-    border-width: 4px;
-    border-style: double;
+    transform: scale(1.03) translateY(-8px);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(102, 16, 242, 0.5);
+    border-color: #9933ff;
+    border-width: 2px;
+    border-style: solid;
 }
 
 .mi-componente h2 {
-    color: #ff3e6c;
-    margin-bottom: 22px;
-    font-size: 34px;
-    font-weight: 800;
-    text-shadow: 2px 2px 0 #fff2cc, -1px -1px 0 rgba(0,0,0,0.1);
-    border-bottom: 3px dashed #ffcccb;
-    padding-bottom: 12px;
-    letter-spacing: 1.2px;
+    color: #00ffff; /* Color cyan */
+    margin-bottom: 28px;
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
+    border-bottom: 2px solid rgba(0, 255, 255, 0.3);
+    padding-bottom: 15px;
+    letter-spacing: 1.5px;
     position: relative;
     display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.4s ease;
 }
 
 .mi-componente h2::after {
-    content: "✨";
+    content: "✧";
     position: absolute;
-    right: -30px;
-    top: 0;
-    font-size: 24px;
-    animation: sparkle 2s infinite;
+    right: -28px;
+    top: -2px;
+    font-size: 28px;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    animation: sparkle 3s infinite;
 }
 
 @keyframes sparkle {
     0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.3) rotate(20deg); }
+    50% { opacity: 0.8; transform: scale(1.5) rotate(25deg); }
 }
 
 .mi-componente p {
-    color: #333;
-    font-size: 18px;
+    color: #ff00ff; /* Color magenta */
+    font-size: 17px;
     line-height: 1.9;
-    margin-top: 18px;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-    padding: 15px;
-    border-left: 5px solid;
-    border-image: linear-gradient(to bottom, #87ceeb, #9370db, #ff69b4) 1;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 22px;
+    background: rgba(20, 20, 35, 0.85);
+    padding: 22px;
+    border-left: 4px solid;
+    border-image: linear-gradient(to bottom, #00ffff, #ff00ff, #8a2be2) 1;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4), 0 0 5px rgba(255, 0, 255, 0.3);
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.7), 0 0 15px rgba(255, 0, 255, 0.4);
 }
 
 .mi-componente p:hover {
-    transform: translateX(5px);
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(240, 255, 255, 0.9));
+    transform: translateX(6px);
+    background: rgba(25, 25, 45, 0.9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 0, 255, 0.5);
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.9), 0 0 20px rgba(255, 0, 255, 0.6);
 }
 
 /* Entrada animada mejorada */
 .mi-componente {
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 1.2s ease-in-out forwards;
+    transform: translateY(40px);
+    animation: fadeInUp 1.2s ease-out forwards;
 }
 
 @keyframes fadeInUp {
@@ -107,7 +117,7 @@
     }
 }
 
-/* Efectos adicionales */
+/* Borde inferior con multicolor */
 .mi-componente::after {
     content: "";
     position: absolute;
@@ -115,36 +125,229 @@
     left: 0;
     width: 100%;
     height: 5px;
-    background: linear-gradient(to right, #ff6b6b, #6b95ff, #5cdb95, #ffcc29);
-    border-radius: 0 0 25px 25px;
+    background: linear-gradient(90deg, #ff0080, #7928ca, #4a00e0, #00bfff, #00ffff);
+    border-radius: 0 0 15px 15px;
+    opacity: 0.9;
 }
 
 /* Estilos para botones dentro del componente */
 .mi-componente .boton {
-    background: linear-gradient(45deg, #ff416c, #ff4b2b);
-    color: white;
+    background: linear-gradient(45deg, #3a0ca3, #7209b7);
+    color: #ffffff;
     border: none;
-    padding: 12px 25px;
+    padding: 15px 30px;
     border-radius: 50px;
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 28px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+    box-shadow: 0 7px 18px rgba(72, 0, 72, 0.4), 0 0 15px rgba(102, 16, 242, 0.3);
     text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
     display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 
 .mi-componente .boton:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 65, 108, 0.6);
-    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(102, 16, 242, 0.6), 0 0 25px rgba(102, 16, 242, 0.5);
+    letter-spacing: 1.8px;
+    background: linear-gradient(45deg, #4a00e0, #8e2de2);
 }
 
-/* Efectos de neón en hover */
+.mi-componente .boton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.mi-componente .boton:hover::before {
+    left: 100%;
+    animation: shine 1.2s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Efectos de neón en hover para título */
 .mi-componente:hover h2 {
-    color: #ff1493;
-    text-shadow: 0 0 5px rgba(255, 20, 147, 0.5), 0 0 10px rgba(255, 20, 147, 0.3);
+    color: #00ffdd;
+    text-shadow: 0 0 15px rgba(0, 255, 221, 0.9), 0 0 25px rgba(0, 255, 221, 0.7), 0 0 35px rgba(0, 255, 221, 0.5);
+    transform: scale(1.05);
+}
+
+/* Personalización adicional para aspecto más llamativo */
+.mi-componente .icono {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Borde brillante en hover */
+.mi-componente:hover {
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.7),
+    0 0 0 2px rgba(102, 16, 242, 0.4),
+    0 0 20px rgba(102, 16, 242, 0.4),
+    0 0 40px rgba(102, 16, 242, 0.2);
+}
+
+/* Efecto de partículas multicolores */
+.mi-componente .particula {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.mi-componente:hover .particula:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    background: #00ffff;
+    box-shadow: 0 0 12px #00ffff;
+    animation: float-particle 7s linear infinite;
+    animation-delay: 0.2s;
+}
+
+.mi-componente:hover .particula:nth-child(2) {
+    top: 70%;
+    left: 80%;
+    background: #ff00ff;
+    box-shadow: 0 0 12px #ff00ff;
+    animation: float-particle 9s linear infinite;
+    animation-delay: 0.6s;
+}
+
+.mi-componente:hover .particula:nth-child(3) {
+    top: 30%;
+    left: 60%;
+    background: #4a00e0;
+    box-shadow: 0 0 12px #4a00e0;
+    animation: float-particle 8s linear infinite;
+    animation-delay: 1s;
+}
+
+.mi-componente:hover .particula:nth-child(4) {
+    top: 60%;
+    left: 30%;
+    background: #00ffaa;
+    box-shadow: 0 0 12px #00ffaa;
+    animation: float-particle 10s linear infinite;
+    animation-delay: 1.4s;
+}
+
+@keyframes float-particle {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.9;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(120px, -120px) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+/* Mejora en los efectos de texto para hacerlos más luminosos */
+.mi-componente h3 {
+    color: #ff9900;
+    font-size: 24px;
+    margin: 20px 0 15px;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(255, 153, 0, 0.8), 0 0 15px rgba(255, 153, 0, 0.5);
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.mi-componente h3:hover {
+    text-shadow: 0 0 12px rgba(255, 153, 0, 0.9), 0 0 20px rgba(255, 153, 0, 0.7);
+    transform: translateX(5px);
+}
+
+/* Efecto de pulso para textos destacados */
+.mi-componente .destacado {
+    color: #00ccff;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(0, 204, 255, 0.7);
+    animation: pulseText 2s infinite;
+}
+
+@keyframes pulseText {
+    0%, 100% {
+        text-shadow: 0 0 8px rgba(0, 204, 255, 0.7), 0 0 15px rgba(0, 204, 255, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(0, 204, 255, 0.9), 0 0 25px rgba(0, 204, 255, 0.6);
+    }
+}
+
+/* Fondo dinámico adicional */
+.mi-componente::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle at center,
+    rgba(26, 21, 44, 0.6) 0%,
+    rgba(14, 8, 28, 0.4) 30%,
+    rgba(8, 8, 16, 0.2) 60%,
+    rgba(0, 0, 0, 0) 100%);
+    opacity: 0.4;
+    animation: rotateBg 25s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes rotateBg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Asegurando que el contenido esté por encima del fondo */
+.mi-componente h2, .mi-componente p, .mi-componente .boton, .mi-componente h3 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Mejora del resplandor en hover */
+.mi-componente:hover::after {
+    height: 6px;
+    background: linear-gradient(90deg, #ff0080, #9933ff, #00ffff, #00bfff, #7928ca);
+    animation: rainbowBorder 3s linear infinite;
+    background-size: 200% auto;
+}
+
+@keyframes rainbowBorder {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
 }
